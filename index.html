@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+
+    <video autoplay muted loop id="bgVideo">
+    <source src="3d2.mp4" type="video/mp4">
+</video>
+
+    <div class="app-container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">GitHub Finder</span>
+            </div>
+            <button id="bookmarksNavBtn" class="nav-bookmarks-btn">
+                 Favoris
+                <span id="bookmarkCountNav" class="badge">0</span>
+            </button>
+        </nav>
+
+        <!-- Hero / Search Section -->
+        <div class="hero-section">
+            <h1>Trouvez les meilleurs talents tech</h1>
+            <p>Recherchez des développeurs GitHub et sauvegardez leurs profils</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Nom d'utilisateur GitHub (ex: torvalds)" autocomplete="off">
+                <button id="searchBtn" class="search-btn"> Rechercher</button>
+            </div>
+        </div>
+
+        <!-- Welcome State -->
+        <div id="welcomeState" class="welcome-state">
+            <div class="welcome-card">
+                <div class="welcome-icon"></div>
+                <h2>Bienvenue sur GitHub Finder</h2>
+                <p>Entrez un nom d'utilisateur GitHub pour commencer votre recherche</p>
+                <div class="example-users">
+                    <span class="example-tag">torvalds</span>
+                    <span class="example-tag">gvanrossum</span>
+                    <span class="example-tag">gaearon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-state hidden">
+            <div class="loader"></div>
+            <p>Chargement du profil...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="error-state hidden">
+            <div class="error-card">
+                <div class="error-icon"></div>
+                <h3>Erreur</h3>
+                <p id="errorMessage">Utilisateur non trouvé</p>
+                <button id="errorRetryBtn" class="retry-btn">Réessayer</button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+         
+            <div class="profile-card" id="userProfile">
+             
+            </div>
+
+            <!-- Repositories Section -->
+            <div class="repos-section">
+                <div class="repos-header">
+                    <h3>Dépôts publics</h3>
+                    <span id="reposCount" class="repos-count">0</span>
+                </div>
+                <div id="reposList" class="repos-grid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bookmarks Section (page séparée visuellement) -->
+        <div id="bookmarksSection" class="bookmarks-section hidden">
+            <div class="bookmarks-header">
+                <h2> Mes favoris</h2>
+                <button id="closeBookmarksBtn" class="close-bookmarks">← Retour</button>
+            </div>
+            <div id="bookmarksList" class="bookmarks-grid">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
