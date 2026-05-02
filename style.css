@@ -475,7 +475,7 @@ body {
 }
 
 .remove-bookmark-btn {
-    background: var(--accent-red);
+    background-color: red;
     color: white;
 }
 
