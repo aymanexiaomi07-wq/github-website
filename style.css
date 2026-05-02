@@ -125,7 +125,8 @@ body {
 }
 
 .hero-section p {
-    color: var(--text-secondary);
+    /* color: var(--text-secondary); */
+    color: #e4e9ef;
     margin-bottom: 1.5rem;
 }
 
