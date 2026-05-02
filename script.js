@@ -208,8 +208,9 @@ function displayRepositories(repos) {
 // ==================== APPEL API GITHUB ====================
 async function fetchGitHubUser(username) {
     const response = await fetch(`https://api.github.com/users/${username}`, {
+
+        
         headers : {
-            // Authorization : "token ${env.Token}"
         }
     });
     if (!response.ok) {
