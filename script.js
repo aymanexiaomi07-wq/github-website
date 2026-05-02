@@ -1,8 +1,8 @@
 // ==================== STATE CENTRALISÉ ====================
 const state = {
-    currentUser: null,      // Utilisateur actuellement affiché
-    bookmarks: [],          // Favoris sauvegardés [{id, login, name, avatar_url}]
-    isViewingBookmarks: false  // Affiche favoris ou résultats?
+    currentUser: null,     
+    bookmarks: [],         
+    isViewingBookmarks: false 
 };
 
 // ==================== ÉLÉMENTS DOM ====================
@@ -201,6 +201,7 @@ function displayRepositories(repos) {
         </div>
     `).join('');
     
+    
     reposListDiv.innerHTML = reposHTML;
 }
 
@@ -359,6 +360,9 @@ document.querySelectorAll('.example-tag').forEach(tag => {
 // ==================== INITIALISATION ====================
 loadBookmarksFromStorage();
 showWelcome();
+
+
+
 
 
 
