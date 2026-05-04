@@ -209,7 +209,7 @@ function displayRepositories(repos) {
 async function fetchGitHubUser(username) {
     const response = await fetch(`https://api.github.com/users/${username}`, {
 
-        
+
         headers : {
         }
     });
@@ -262,6 +262,7 @@ async function searchUser(username) {
         state.currentUser = null;
     }
 }
+
 
 // ==================== AFFICHAGE DES FAVORIS ====================
 function displayBookmarks() {
